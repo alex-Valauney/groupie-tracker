@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artist Details</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <header>
+        <ul class="topnav">
+            <li><a class="active" href="/">Home</a></li>
+            <li class="mid"><a>Groupie-Tracker</a></li>
+        </ul>
+    </header>
+    <br><br>
+    <div class="boite">
+        <h1>{{.Artist.Name}}</h1>
+        <img src="{{.Artist.Image}}" alt="Artist Image">
+        <p><strong>Creation Date:</strong> {{.Artist.CreationDates}}</p>
+        <p><strong>First Album:</strong> {{.Artist.FirstAlbum}}</p>
+        <p><strong>Members:</strong>
+            <ul>
+                {{range .Artist.Members}}
+                <li>{{.}}</li>
+                {{end}}
+            </ul>
+        </p>
+        
+        <h3>Concert Information</h3>
+        {{range $location, $dates := .Relations.DatesLocations}}
+        <strong>{{$location}}</strong><br>
+            <ul>
+                {{range $dates}}
+                <li>{{.}}</li>
+                {{end}}
+            </ul>
+        </p>
+    {{end}}
+    </div>
+</body>
+</html>

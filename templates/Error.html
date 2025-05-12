@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, intital-scale=1.0">
+        <link rel="stylesheet" href="/static/css/style.css">
+        <title>
+            Error {{.CodeErr}}
+        </title>
+    </head>
+    <body>
+        <header>    
+            <ul class="topnav">
+                <li><a class="active" href="/">Home</a></li>
+                <li class="mid"><a>Groupie-Tracker</a></li>
+            </ul>
+        </header>
+        <br><br>
+        <div class="boite">
+            <h1>
+                Error {{.CodeErr}}
+            </h1>
+            <p>{{.MessageErr}}</p>
+        </div>
+    </body>
+</html>

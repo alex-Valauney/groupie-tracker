@@ -1,0 +1,68 @@
+body {
+    background-image: url('liege.avif');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color:black;
+    font-size: 20px;
+    margin: 0;
+}
+header {
+    position: fixed;
+    height: 10vh;
+    width: 100vw;
+    z-index: 50;
+    background-size: cover;
+}
+
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0%;
+    width: 101%;
+}
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul.topnav li a:hover:not(.active) {background-color: #111;}
+
+ul.topnav li a.active {background-color: #04AA6D;}
+
+ul.topnav li.right {float: right;}
+
+.boite {
+    background-color:#333;
+    color: white;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+@media screen and (max-width: 600px) {
+  ul.topnav li.right, 
+  ul.topnav li {float: none;}
+  .boite {margin-top: 10vh;}
+}
