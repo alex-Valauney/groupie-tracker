@@ -2,7 +2,7 @@
 
 ## Résumé
 
-Groupie tracker est un site utilisant une api externe sur des groupe de musique, se site est séparer en 2 partie :
+Groupie tracker est un site utilisant une api externe sur des groupe de musique, se site est séparer en 2 partie (lutilisation du Go est imposer) :
   * La page index, montre les différent groupe de musique
   * La page détaille a pour section :
       * Nom de l'artiste ou du groupe
